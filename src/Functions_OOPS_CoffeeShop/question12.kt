@@ -1,14 +1,14 @@
 package Functions_OOPS_CoffeeShop
 
-data class CoffeeMenu(val items: String, val List:<String>) {
+data class CoffeeMenu(val items: List<String>) {
     fun printMenu() {
         println("Coffee Menu:")
         for (item in items) {
-            println("$item")
+            println("- $item")
         }
     }
 }
 fun main() {
-    val menu = CoffeeMenu(listOf("Espresso","Latte","Americano","Mocha"))
+    val menu = CoffeeMenu(listOf("Espresso", "Latte", "Cappuccino", "Mocha"))
     menu.printMenu()
 }

@@ -3,6 +3,6 @@ fun main() {
         for (col in 1..4) {
             print("☕ ")
         }
-        println() // Move to the next line after each row
+        println()
     }
 }

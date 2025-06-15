@@ -29,7 +29,6 @@ fun SignInPasswordScreen() {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
-        // "Sign in" Text with specific dimensions
         Box(
             modifier = Modifier
                 .width(99.dp)
@@ -44,8 +43,6 @@ fun SignInPasswordScreen() {
         }
 
         Spacer(modifier = Modifier.height(24.dp))
-
-        // Password Field with light grey background and no icon
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
@@ -59,7 +56,6 @@ fun SignInPasswordScreen() {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Continue Button - rounded
         Button(
             onClick = { /* TODO: Handle Continue */ },
             modifier = Modifier
@@ -73,7 +69,6 @@ fun SignInPasswordScreen() {
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        // "Forgot Password? Reset" Text
         Text(
             buildAnnotatedString {
                 append("Forgot Password? ")

@@ -30,7 +30,6 @@ fun CreateAccountScreen() {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
-        // Create Account Title
         Text(
             text = "Create Account",
             fontSize = 28.sp,
@@ -39,8 +38,6 @@ fun CreateAccountScreen() {
             modifier = Modifier
                 .padding(top = 80.dp, bottom = 32.dp)
         )
-
-        // Input Fields
         val fieldModifier = Modifier
             .fillMaxWidth()
             .height(56.dp)
@@ -62,9 +59,7 @@ fun CreateAccountScreen() {
             value = firstName,
             onValueChange = { firstName = it },
             label = { Text("Firstname") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color(0xFFF0F0F0)
+            modifier = fieldModifier,
         )
 
         OutlinedTextField(
@@ -94,7 +89,6 @@ fun CreateAccountScreen() {
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // Continue Button
         Button(
             onClick = { /* TODO: Handle Continue */ },
             modifier = Modifier
@@ -107,8 +101,6 @@ fun CreateAccountScreen() {
         }
 
         Spacer(modifier = Modifier.height(24.dp))
-
-        // Forgot Password? Reset
         Text(
             buildAnnotatedString {
                 append("Forgot Password ? ")

@@ -65,15 +65,15 @@ fun SignInScreen() {
             Text(text = "Continue", fontSize = 16.sp)
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
-        Text(
-            text = "Don't have an Account? Create One",
-            fontSize = 12.sp,
-            color = Color.Black,
-            modifier = Modifier.padding(top = 8.dp),
-            textAlign = TextAlign.Center
-        )
+    Text(
+        text = "Don't have an Account? Create One",
+        fontSize = 12.sp,
+        color = Color.Black,
+        modifier = Modifier.padding(top = 8.dp),
+        textAlign = TextAlign.Center
+    )
 
         Spacer(modifier = Modifier.height(32.dp))
 

@@ -25,7 +25,7 @@ fun SignInPasswordScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(start = 27.dp, end = 24.dp, top = 123.dp), // Top = 123dp, Left = 27dp
+            .padding(start = 27.dp, end = 24.dp, top = 123.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
@@ -51,7 +51,7 @@ fun SignInPasswordScreen() {
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(0xFFF0F0F0), shape = RoundedCornerShape(8.dp)) // light grey
+                .background(Color(0xFFF0F0F0), shape = RoundedCornerShape(8.dp))
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -61,7 +61,7 @@ fun SignInPasswordScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
-            shape = RoundedCornerShape(16.dp), // Rounded corner
+            shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF9B6EF3))
         ) {
             Text("Continue", color = Color.White, fontSize = 16.sp)

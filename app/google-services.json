@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "114727255953",
+    "project_id": "fir-projectgenai-323d9",
+    "storage_bucket": "fir-projectgenai-323d9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114727255953:android:ff9310da10399f4af3e430",
+        "android_client_info": {
+          "package_name": "com.example.my_jetpack_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8KYqH4Oniqz6YefOwYawwgpOB3KWX4fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114727255953:android:5c73a02e4f0e9188f3e430",
+        "android_client_info": {
+          "package_name": "com.example.testproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8KYqH4Oniqz6YefOwYawwgpOB3KWX4fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

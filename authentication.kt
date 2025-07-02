@@ -17,28 +17,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.firebase.auth.FirebaseAuth
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material3.Surface
-import com.example.my_jetpack_application.ui.theme.My_Jetpack_ApplicationTheme
-
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            My_Jetpack_ApplicationTheme {
-                Surface(
-                    color = Color.White // ensure white background
-                ) {
-                    SignInScreen() // ✅ CALLING YOUR UI COMPOSABLE
-                }
-            }
-        }
-    }
-}
-
 
 @Composable
 fun SignInScreen() {
@@ -92,13 +70,13 @@ fun SignInScreen() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-    Text(
-        text = "Don't have an Account? Create One",
-        fontSize = 12.sp,
-        color = Color.Black,
-        modifier = Modifier.padding(top = 8.dp),
-        textAlign = TextAlign.Center
-    )
+        Text(
+            text = "Don't have an Account? Create One",
+            fontSize = 12.sp,
+            color = Color.Black,
+            modifier = Modifier.padding(top = 8.dp),
+            textAlign = TextAlign.Center
+        )
 
         Spacer(modifier = Modifier.height(32.dp))
 

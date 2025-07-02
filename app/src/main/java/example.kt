@@ -290,73 +290,73 @@ fun LocationFetcher(context: Context = LocalContext.current,onContinueClick : ()
 
 
 
-//Location Continue
-//@SuppressLint("MissingPermission")
-//fun getCurrentLocation(context: Context, onLocationReceived: (Location?) -> Unit) {
-//    val locationClient = LocationServices.getFusedLocationProviderClient(context)
-//    locationClient.lastLocation
-//        .addOnSuccessListener { location ->
-//            onLocationReceived(location)
-//        }
-//        .addOnFailureListener {
-//            onLocationReceived(null)
-//        }
-//}
-//
-//@OptIn(ExperimentalPermissionsApi::class)
-//@Composable
-//fun LocationFetcher(
-//    context: Context = LocalContext.current,
-//    onContinueClick: () -> Unit = {} // optional
-//) {
-//    var locationText by remember { mutableStateOf<String?>(null) }
-//    val permissionState = rememberPermissionState(Manifest.permission.ACCESS_FINE_LOCATION)
-//
-//    // Request permission automatically on first launch
-//    LaunchedEffect(Unit) {
-//        if (!permissionState.status.isGranted) {
-//            permissionState.launchPermissionRequest()
-//        }
-//    }
-//
-//    // Fetch location only once permission is granted
-//    LaunchedEffect(permissionState.status.isGranted) {
-//        if (permissionState.status.isGranted) {
-//            getCurrentLocation(context) { location: Location? ->
-//                location?.let {
-//                    locationText = "Lat: ${it.latitude}, Long: ${it.longitude}"
-//                }
-//            }
-//        }
-//    }
-//
-//
-//
-//    // Show location and continue button only after fetching
-//    if (locationText != null) {
-//        Column(
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .padding(16.dp),
-//            horizontalAlignment = Alignment.CenterHorizontally,
-//            verticalArrangement = Arrangement.Center
-//        ) {
-//            Text(
-//                text = locationText!!,
-//                style = MaterialTheme.typography.bodyLarge,
-//                color = Color.Black
-//            )
-//            Spacer(modifier = Modifier.height(32.dp))
-//            Button(
-//                onClick = onContinueClick,
-//                shape = RoundedCornerShape(20.dp),
-//                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFADCFFF)) // Soft blue
-//            ) {
-//                Text("Continue", color = Color.Black, fontWeight = FontWeight.Bold)
-//            }
-//        }
-//    }
-//}
+Location Continue
+@SuppressLint("MissingPermission")
+fun getCurrentLocation(context: Context, onLocationReceived: (Location?) -> Unit) {
+    val locationClient = LocationServices.getFusedLocationProviderClient(context)
+    locationClient.lastLocation
+        .addOnSuccessListener { location ->
+            onLocationReceived(location)
+        }
+        .addOnFailureListener {
+            onLocationReceived(null)
+        }
+}
+
+@OptIn(ExperimentalPermissionsApi::class)
+@Composable
+fun LocationFetcher(
+    context: Context = LocalContext.current,
+    onContinueClick: () -> Unit = {} // optional
+) {
+    var locationText by remember { mutableStateOf<String?>(null) }
+    val permissionState = rememberPermissionState(Manifest.permission.ACCESS_FINE_LOCATION)
+
+    // Request permission automatically on first launch
+    LaunchedEffect(Unit) {
+        if (!permissionState.status.isGranted) {
+            permissionState.launchPermissionRequest()
+        }
+    }
+
+    // Fetch location only once permission is granted
+    LaunchedEffect(permissionState.status.isGranted) {
+        if (permissionState.status.isGranted) {
+            getCurrentLocation(context) { location: Location? ->
+                location?.let {
+                    locationText = "Lat: ${it.latitude}, Long: ${it.longitude}"
+                }
+            }
+        }
+    }
+
+
+
+    // Show location and continue button only after fetching
+    if (locationText != null) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = locationText!!,
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Black
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+            Button(
+                onClick = onContinueClick,
+                shape = RoundedCornerShape(20.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFADCFFF)) // Soft blue
+            ) {
+                Text("Continue", color = Color.Black, fontWeight = FontWeight.Bold)
+            }
+        }
+    }
+}
 
 
 //Smart Replies Integration

@@ -110,7 +110,7 @@ fun LocationFetcher(context: Context = LocalContext.current,onContinueClick : ()
     }
 }
 
-Location Continue
+//Location Continue
 @SuppressLint("MissingPermission")
 fun getCurrentLocation(context: Context, onLocationReceived: (Location?) -> Unit) {
     val locationClient = LocationServices.getFusedLocationProviderClient(context)
